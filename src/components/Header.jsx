@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-      <div className="text-center px-4">
+      <div className="text-center pt-[120px]">
           <h1 className="text-3xl md:text-4xl text-neutral-200 font-bold uppercase leading-snug">
               Automate Your Trading with Money Machine X
           </h1>
