@@ -32,11 +32,13 @@ const values = [
 
 const About = () => {
     return (
-        <div className="pt-[120px] px-10">
+        <div className="container mx-auto pt-[120px] px-6">
+            <h2 className="text-4xl font-bold text-center mb-6">About Us</h2>
+            <div className="w-[200px] mx-auto h-[2px] bg-indigo-500 mb-10"></div>
             {/* Vision Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 items-center">
                 {/* Left: Mission Image */}
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center mb-10">
                     <Image
                         src="/vision.png" // Update with the actual image path
                         alt="Our Vision"
@@ -61,8 +63,8 @@ const About = () => {
             </div>
 
             {/* Mission Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center mt-32">
-                {/* Left: Vision Content */}
+            <div className="flex flex-col-reverse gap-10 md:grid md:grid-cols-2 items-center mt-32">
+                {/* Left: Mission Content */}
                 <div className="w-full md:w-1/2 md:ml-[200px]">
                     <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
                     <p className="text-gray-600 leading-relaxed">
@@ -89,8 +91,8 @@ const About = () => {
 
             {/* Value Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 items-center mt-32">
-                {/* Left: Mission Image */}
-                <div className="flex justify-center items-center">
+                {/* Left: Value Image */}
+                <div className="flex justify-center items-center mb-10">
                     <Image
                         src="/value.png" // Update with the actual image path
                         alt="Our Vision"
@@ -100,16 +102,14 @@ const About = () => {
                     />
                 </div>
 
-                {/* Right: Mission Content */}
+                {/* Right: Value Content */}
                 <div className="w-full md:w-1/2 md:ml-[150px]">
                     <h2 className="text-3xl font-semibold mb-4">Our Values</h2>
-                        {values.map((value, index) => (
-                            <p key={index} className="text-gray-600 mb-2">
-                                <strong>{value.title}:</strong>{' '}
-                                {value.description}
-                            </p>
-                        ))}
-                  
+                    {values.map((value, index) => (
+                        <p key={index} className="text-gray-600 mb-2">
+                            <strong>{value.title}:</strong> {value.description}
+                        </p>
+                    ))}
                 </div>
             </div>
         </div>
