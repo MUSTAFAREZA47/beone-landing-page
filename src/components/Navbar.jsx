@@ -19,6 +19,7 @@ export default function Navbar() {
                         height={50}
                     />
                 </Link>
+                
                 {/* Mobile Menu Button */}
                 <button
                     className="md:hidden focus:outline-none"
@@ -27,60 +28,146 @@ export default function Navbar() {
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
 
-                {/* Navigation Links */}
-                <ul
-                    className={`md:flex space-x-6 absolute md:static top-16 left-0 w-full md:w-auto bg-opacity-50 md:bg-transparent text-center md:flex-row transition-all duration-300 ease-in-out backdrop-blur-lg ${
-                        isOpen ? 'block' : 'hidden'
-                    }`}
-                >
-                    <li>
-                        <Link
-                            href="/"
-                            className="block py-2 md:py-0 hover:text-gray-400"
-                        >
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/about"
-                            className="block py-2 md:py-0 hover:text-gray-400"
-                        >
-                            About Us
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/contact"
-                            className="block py-2 md:py-0 hover:text-gray-400"
-                        >
-                            Contact Us
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/testimonial"
-                            className="block py-2 md:py-0 hover:text-gray-400"
-                        >
-                            Testimonial
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            href="/our-policy"
-                            className="block py-2 md:py-0 hover:text-gray-400"
-                        >
-                            Legal Policies
-                        </Link>
-                    </li>
-                </ul>
+                {/* Desktop Navigation Links */}
+                <div className="hidden md:block">
+                    <ul className="flex gap-x-4 static w-auto bg-transparent flex-row transition-all duration-300 ease-in-out backdrop-blur-lg">
+                        <li>
+                            <Link
+                                href="/"
+                                className="block py-2 md:py-0 hover:text-gray-400"
+                            >
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/about"
+                                className="block py-2 md:py-0 hover:text-gray-400"
+                            >
+                                About Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/contact"
+                                className="block py-2 md:py-0 hover:text-gray-400"
+                            >
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/testimonial"
+                                className="block py-2 md:py-0 hover:text-gray-400"
+                            >
+                                Testimonial
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href="/our-policy"
+                                className="block py-2 md:py-0 hover:text-gray-400"
+                            >
+                                Legal Policies
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
 
-                {/* Login Button */}
-                <Link href="/login" className="hidden md:block">
-                    <button className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md">
-                        Login
-                    </button>
-                </Link>
+                <div className="md:flex md:flex-row md:gap-x-3 hidden">
+                    {/* Login Button */}
+                    <Link
+                        href="https://t.me/moneymachinexeab1percent"
+                        className="hidden md:block"
+                    >
+                        <div className="bg-slate-600 hover:bg-slate-500 text-white px-4 py-2 rounded-md md:flex md:flex-row md:gap-x-3 hidden">
+                            <Image
+                                src="/telegram.png"
+                                alt="telegram"
+                                width={25}
+                                height={25}
+                            />
+                            <p>Join</p>
+                        </div>
+                    </Link>
+
+                    {/* Login Button */}
+                    <Link href="/login" className="hidden md:block">
+                        <button className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md">
+                            Login
+                        </button>
+                    </Link>
+                </div>
+
+                {/* Mobile Navigation Links */}
+                {isOpen && (
+                    <div>
+                        <ul className="flex flex-col absolute top-20 right-0 bg-zinc-800 mr-10 px-20 py-10 rounded-3xl transition-all duration-300 ease-in-out">
+                            <li>
+                                <Link
+                                    href="/"
+                                    className="block py-2 md:py-0 hover:text-gray-400"
+                                >
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/about"
+                                    className="block py-2 md:py-0 hover:text-gray-400"
+                                >
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/contact"
+                                    className="block py-2 md:py-0 hover:text-gray-400"
+                                >
+                                    Contact Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/testimonial"
+                                    className="block py-2 md:py-0 hover:text-gray-400"
+                                >
+                                    Testimonial
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="/our-policy"
+                                    className="block py-2 md:py-0 hover:text-gray-400"
+                                >
+                                    Legal Policies
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://t.me/moneymachinexeab1percent"
+                                >
+                                    <div className="bg-slate-600 hover:bg-slate-500 text-white px-4 py-2 rounded-md flex flex-row gap-x-3">
+                                        <Image
+                                            src="/telegram.png"
+                                            alt="telegram"
+                                            width={25}
+                                            height={25}
+                                        />
+                                        <p>Join</p>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/login" className="block py-2">
+                                    <button className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-2 rounded-md">
+                                        Login
+                                    </button>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                )}
             </div>
         </nav>
     )
