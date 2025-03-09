@@ -1,3 +1,4 @@
+'use client'
 import Header from '../components/Header'
 import SectionOne from '../components/SectionOne'
 import FAQ from '../components/FAQ'
