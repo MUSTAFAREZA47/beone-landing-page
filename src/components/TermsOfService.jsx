@@ -9,13 +9,13 @@ const TermsOfService = () => {
             </h1>
             <div className="w-[200px] mx-auto h-[1px] bg-indigo-500 mb-10"></div>
             <p className="text-gray-400 mb-4 pl-6">
-                Last updated: [Insert Date]
+                Last updated: March 23, 2025
             </p>
 
             <div className="p-6">
                 <h2 className="text-2xl font-semibold mt-6">Overview</h2>
                 <p>
-                    This website is operated by <strong>BeOne Percent</strong>.
+                    This website is operated by <strong>BeOne Percent FZ-LLC</strong>.
                     Throughout the site, the terms "we", "us", and "our" refer
                     to BeOne Percent. By using our website and purchasing our
                     services, you agree to comply with these Terms of Service.
@@ -121,10 +121,10 @@ const TermsOfService = () => {
                     If you have any questions about these Terms, please contact
                     us at{' '}
                     <a
-                        href="mailto:support@beonepercent.com"
+                        href="mailto:support@moneymachinex.com"
                         className="text-indigo-500"
                     >
-                        support@beonepercent.com
+                        support@moneymachinex.com
                     </a>
                     .
                 </p>

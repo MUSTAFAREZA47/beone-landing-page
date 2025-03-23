@@ -9,7 +9,7 @@ const RefundPolicy = () => {
             </h1>
             <div className="w-[200px] mx-auto h-[1px] bg-indigo-500 mb-10"></div>
             <p className="text-gray-400 mb-4 pl-6">
-                Last updated: [Insert Date]
+                Last updated: March 23, 2025
             </p>
 
             <div className="p-6">

@@ -42,7 +42,7 @@ export default function Signup() {
                             placeholder="Enter your name"
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border rounded-lg  focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            className="w-full px-4 py-2 border rounded-lg  focus:ring-2 bg-zinc-700 focus:ring-blue-500 focus:outline-none"
                         />
                     </div>
 
@@ -57,7 +57,7 @@ export default function Signup() {
                             placeholder="Enter your email"
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border rounded-lg  focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            className="w-full px-4 py-2 border rounded-lg bg-zinc-700  focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         />
                     </div>
 
@@ -72,7 +72,7 @@ export default function Signup() {
                             placeholder="Create a password"
                             onChange={handleChange}
                             required
-                            className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                            className="w-full px-4 py-2 border rounded-lg bg-zinc-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         />
                     </div>
 

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore Google API JSON file
+/src/app/api/google-drive/money-machine-x-api.json
+/src/app/api/google-drive/*.json
+
+/src/app/api/google-drive/money-machine-x-api.json

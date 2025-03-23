@@ -2,7 +2,6 @@
 import Header from '../components/Header'
 import SectionOne from '../components/SectionOne'
 import FAQ from '../components/FAQ'
-import { SlidingCard } from '../components/SlidingCard'
 import CTAButton from '../components/CTA'
 import SectionThree from '../components/SectionThree'
 import HeroSection from '../components/HeroSection'
@@ -11,6 +10,9 @@ import Testimonials from '../components/Testimonial'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import NewsLetter from '../components/NewsLetter'
+import { Car } from 'lucide-react'
+import { CarouselDemo } from '../components/SlidingCard02'
+
 
 export default function Home() {
     return (
@@ -44,8 +46,13 @@ export default function Home() {
                 <CTAButton />
             </div>
 
-            {/* SlidingCard */}
-            <SlidingCard />
+            {/* Carousel */}
+            <div className="w-full h-full my-20">
+                <h2 className="max-w-7xl text-center mx-auto text-3xl font-bold text-neutral-200 uppercase">
+                    Real Profits. <br className="sm:hidden" /> Real Results.
+                </h2>
+                <CarouselDemo />
+            </div>
             <div className="flex justify-center">
                 <CTAButton />
             </div>
@@ -66,7 +73,7 @@ export default function Home() {
             <div className="flex justify-center mt-8">
                 <CTAButton />
             </div>
-            
+
             {/* Footer */}
             <Footer />
         </div>

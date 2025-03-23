@@ -7,7 +7,7 @@ const policies = [
     { title: 'Refund Policy', path: '/our-policy/refund-policy' },
     { title: 'Shipping Policy', path: '/our-policy/shipping-policy' },
     { title: 'Privacy Policy', path: '/our-policy/privacy-policy' },
-    { title: 'Cookie Policy', path: '/our-policy/cookie-policy' },
+    { title: 'Legal Notice', path: '/our-policy/legal-notice' },
 ]
 
 const LegalPolicies = () => {

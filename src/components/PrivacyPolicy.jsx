@@ -10,16 +10,16 @@ const PrivacyPolicy = () => {
             <div className="w-[200px] mx-auto h-[1px] bg-indigo-500 mb-10"></div>
 
             <p className="text-gray-400 mb-4 pl-6">
-                Last updated: [Insert Date]
+                Last updated: March 23, 2025
             </p>
 
             <div className=" p-6">
                 <p className="mb-4">
-                    At <strong>Money Machine X</strong>, accessible from [your
-                    website URL], protecting our users' privacy is a top
-                    priority. This Privacy Policy outlines the types of
-                    information we collect, how we use it, and your rights
-                    regarding your personal data.
+                    At <strong>Money Machine X</strong>, accessible from{' '}
+                    <strong>www.moneymachinex.com</strong>, protecting our
+                    users' privacy is a top priority. This Privacy Policy
+                    outlines the types of information we collect, how we use it,
+                    and your rights regarding your personal data.
                 </p>
 
                 <h2 className="text-xl font-semibold mt-6">Consent</h2>
@@ -123,8 +123,7 @@ const PrivacyPolicy = () => {
 
                 <h2 className="text-xl font-semibold mt-6">Contact Us</h2>
                 <p>
-                    If you have any questions, please contact us at [your
-                    contact email].
+                    If you have any questions, please contact us at support@moneymachinex.com
                 </p>
             </div>
         </div>

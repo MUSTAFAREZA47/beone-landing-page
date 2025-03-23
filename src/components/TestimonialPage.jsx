@@ -4,7 +4,7 @@ const TestimonialPage = () => {
   return (
       <div>
           <h1 className="text-9xl py-[100px] text-center">
-              I am Testimonial page
+              What Our Customers Say!
           </h1>
       </div>
   )

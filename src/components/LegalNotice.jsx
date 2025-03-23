@@ -9,16 +9,16 @@ const LegalNotice = () => {
             </h1>
             <div className="w-[200px] mx-auto h-[1px] bg-indigo-500 mb-10"></div>
             <p className="text-gray-400 mb-4 pl-6">
-                Last updated: [Insert Date]
+                Last updated: March 23, 2025
             </p>
 
             <div className="p-6">
                 <p>
                     **Money Machine X** is developed by the **BeOne Percent**
                     team and sold exclusively at
-                    <a href="[Your Website URL]" className="text-indigo-500">
+                    <a href="https://www.moneymachinex.com" className="text-indigo-500">
                         {' '}
-                        [Your Website URL]
+                        www.moneymachinex.com
                     </a>
                     .
                 </p>

@@ -9,7 +9,7 @@ const ShippingPolicy = () => {
             </h1>
             <div className="w-[200px] mx-auto h-[1px] bg-indigo-500 mb-10"></div>
             <p className="text-gray-400 mb-4 pl-6">
-                Last updated: [Insert Date]
+                Last updated: March 23, 2025
             </p>
 
             <div className="p-6">
@@ -45,10 +45,10 @@ const ShippingPolicy = () => {
                     If you do not receive the email or require assistance with
                     installation, please contact our support team at{' '}
                     <a
-                        href="mailto:support@beonepercent.com"
+                        href="mailto:support@moneymachinex.com"
                         className="text-indigo-500"
                     >
-                        support@beonepercent.com
+                        support@moneymachinex.com
                     </a>
                     . We are here to help.
                 </p>
