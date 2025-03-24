@@ -12,6 +12,7 @@ import Footer from '../components/Footer'
 import NewsLetter from '../components/NewsLetter'
 import { Car } from 'lucide-react'
 import { CarouselDemo } from '../components/SlidingCard02'
+import Link from 'next/link'
 
 
 export default function Home() {
@@ -48,11 +49,17 @@ export default function Home() {
 
             {/* Carousel */}
             <div className="w-full h-full my-20">
-                <h2 className="max-w-7xl text-center mx-auto text-3xl font-bold text-neutral-200 uppercase">
+                <h2 className="max-w-7xl text-center mx-auto text-3xl pb-2 font-bold text-neutral-200 uppercase">
                     Real Profits. <br className="sm:hidden" /> Real Results.
                 </h2>
+                <div className="h-1 bg-blue-500 w-20 mx-auto mt-2"></div>
                 <CarouselDemo />
             </div>
+            <Link href="/testimonial">
+                    <p className="flex justify-center my-12 text-blue-500 underline ">
+                        View More Profits
+                    </p>
+                </Link>
             <div className="flex justify-center">
                 <CTAButton />
             </div>

@@ -11,7 +11,7 @@ export default function SectionThree() {
     ]
 
     return (
-        <div className="h-auto w-full relative flex flex-col items-center px-6 mt-20">
+        <div className="h-auto relative flex flex-col items-center px-6 mt-20">
             {/* Heading */}
             <h2 className="text-3xl font-bold text-neutral-200 uppercase text-center mb-10">
                 How Money Machine X Works?
