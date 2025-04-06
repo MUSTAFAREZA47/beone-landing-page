@@ -17,7 +17,6 @@
     "dotenv": "^16.4.7",
     "dotted-map": "^2.2.3",
     "googleapis": "^146.0.0",
-    "imagekitio-next": "^1.0.1",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.479.0",
     "mini-svg-data-uri": "^1.4.4",
