@@ -13,73 +13,108 @@ import NewsLetter from '../components/NewsLetter'
 import { Car } from 'lucide-react'
 import { CarouselDemo } from '../components/SlidingCard02'
 import Link from 'next/link'
-
+import { motion } from 'framer-motion'
 
 export default function Home() {
     return (
-        <div className="dark:bg-black text-white">
+        <div className="dark:bg-black text-white min-h-screen">
             {/* Navbar */}
             <Navbar />
+            
             {/* Header */}
             <Header />
 
             {/* Hero section */}
             <HeroSection />
-            <div className="flex justify-center mt-8">
-                <CTAButton />
-            </div>
 
             {/* SectionOne */}
             <SectionOne />
-            <div className="flex justify-center mt-8">
-                <CTAButton />
-            </div>
 
             {/* SectionTwo */}
             <SectionTwo />
-            <div className="flex justify-center mt-8">
-                <CTAButton />
-            </div>
 
             {/* SectionThree */}
             <SectionThree />
-            <div className="flex justify-center mt-8">
-                <CTAButton />
-            </div>
 
             {/* Carousel */}
-            <div className="w-full h-full my-20">
-                <h2 className="max-w-7xl text-center mx-auto text-3xl pb-2 font-bold text-neutral-200 uppercase">
-                    Real Profits. <br className="sm:hidden" /> Real Results.
-                </h2>
-                <div className="h-1 bg-blue-500 w-20 mx-auto mt-2"></div>
-                <CarouselDemo />
-            </div>
-            <Link href="/testimonial">
-                    <p className="flex justify-center my-12 text-blue-500 underline ">
-                        View More Profits
-                    </p>
-                </Link>
-            <div className="flex justify-center">
-                <CTAButton />
-            </div>
+            <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="text-center"
+                    >
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-200 uppercase tracking-tight">
+                            Real Profits. <br className="sm:hidden" /> Real Results.
+                        </h2>
+                        <div className="h-1 bg-gradient-to-r from-blue-500 to-indigo-600 w-20 mx-auto mt-4 rounded-full"></div>
+                    </motion.div>
+                    
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="mt-8 sm:mt-12 md:mt-16"
+                    >
+                        <CarouselDemo />
+                    </motion.div>
+                </div>
+            </section>
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="flex justify-center my-8 sm:my-12 md:my-16"
+            >
+                <Link 
+                        href="/testimonial"
+                        className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors duration-300"
+                    >
+                        <span className="text-lg font-medium">View More Profits</span>
+                        <svg 
+                            className="w-5 h-5 ml-2" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth={2} 
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                            />
+                        </svg>
+                    </Link>
+            </motion.div>
 
             {/* Testimonials */}
             <Testimonials />
-            <div className="flex justify-center mt-8">
-                <CTAButton />
-            </div>
 
             {/* FAQ */}
             <FAQ />
-            <div className="flex justify-center mt-8 mb-20">
-                <CTAButton />
-            </div>
 
+            {/* Newsletter */}
             <NewsLetter />
-            <div className="flex justify-center mt-8">
-                <CTAButton />
-            </div>
+
+            {/* CTA Section */}
+            <section className="py-8 sm:py-12 md:py-16">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="flex justify-center"
+                    >
+                        <CTAButton />
+                    </motion.div>
+                </div>
+            </section>
 
             {/* Footer */}
             <Footer />

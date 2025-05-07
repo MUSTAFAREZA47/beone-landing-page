@@ -11,8 +11,9 @@ const HeroSection = () => {
                   width={1920}
                   height={1080}
                   className="w-full h-auto object-cover"
+          priority
               />
-              <div className="absolute bottom-0  w-full h-32 bg-gradient-to-t from-black/90 to-transparent"></div>
+        <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black/90 to-transparent"></div>
           </div>
       </div>
   )

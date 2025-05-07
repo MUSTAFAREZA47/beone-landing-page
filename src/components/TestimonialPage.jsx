@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // data for testimonials
 import { testimonials } from '../constant.js'
@@ -7,17 +7,16 @@ import { testimonials } from '../constant.js'
 // data for profit screenshots
 import { profitScreenshots } from '../constant.js'
 
-
-export default function TestimonialPage() {
+const TestimonialPage = () => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
-    // Auto-slide every 3 seconds
+    // Auto-slide every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex(
-                (prevIndex) => (prevIndex + 1) % testimonials.length,
+            setCurrentIndex((prevIndex) =>
+                prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
             )
-        }, 3000)
+        }, 5000)
 
         return () => clearInterval(interval)
     }, [])
@@ -33,7 +32,7 @@ export default function TestimonialPage() {
 
                 <div className="relative isolate overflow-hidden mt-10">
                     <div
-                        className="flex transition-transform duration-500"
+                        className="flex transform transition-transform duration-500"
                         style={{
                             transform: `translateX(-${currentIndex * 100}%)`,
                         }}
@@ -81,7 +80,7 @@ export default function TestimonialPage() {
                             key={index}
                             src={screenshot}
                             alt={`Profit ${index + 1}`}
-                            className="w-full rounded-lg border border-blue-500/50 shadow-lg hover:scale-105 transition-transform duration-300"
+                            className="w-full rounded-lg border border-blue-500/50 shadow-lg transform hover:scale-105 transition-transform duration-300"
                         />
                     ))}
                 </div>
@@ -89,3 +88,5 @@ export default function TestimonialPage() {
         </section>
     )
 }
+
+export default TestimonialPage

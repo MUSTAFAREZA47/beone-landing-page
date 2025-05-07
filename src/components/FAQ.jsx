@@ -1,28 +1,33 @@
 'use client'
 import React, { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const faqs = [
     {
-        question: 'How do I get started with Money Machine X?',
-        answer: 'Simply purchase or subscribe, connect your trading account, and let the Money Machine X trade for you—no complex setup required',
+        question: 'What is Money Machine X?',
+        answer: 'Money Machine X is an advanced algorithmic trading system that uses sophisticated mathematical models to analyze market conditions and execute trades automatically. It operates 24/7 across forex, crypto, and stock markets to generate consistent profits.',
     },
     {
-        question: 'What markets does Money Machine X trade in?',
-        answer: 'Money Machine X trades in forex and crypto, adapting to market trends using its advanced mathematical algorithm',
+        question: 'How does the algorithm work?',
+        answer: 'Our algorithm combines machine learning, technical analysis, and market sentiment analysis to identify high-probability trading opportunities. It continuously monitors market conditions, executes trades based on predefined parameters, and manages risk automatically.',
     },
     {
-        question: 'Is Money Machine X really profitable?',
-        answer: 'Yes! Money Machine X is tested & verified with performance and genrating consistent profits',
+        question: 'Is it safe to use?',
+        answer: 'Yes, we implement industry-standard security measures including end-to-end encryption, secure API connections, and regular security audits. Your trading account remains under your control, and we never have access to withdraw funds.',
     },
     {
-        question: 'Can I withdraw profits daily?',
-        answer: 'Absolutely! You have full control over withdrawals and can access your profits anytime',
+        question: 'What are the fees and costs?',
+        answer: 'We operate on a performance-based fee structure. There are no upfront costs or hidden fees. We only charge a small percentage of the profits generated, ensuring our success is directly tied to your success.',
     },
     {
-        question: 'Do I need trading experience?',
-        answer: 'No! Money Machine X is fully automated—just set it up and relax while it trades for you',
+        question: 'How do I get started?',
+        answer: 'Getting started is simple: choose your preferred plan, connect your trading account through our secure API, and let the algorithm begin trading. Our team provides full support throughout the setup process.',
     },
+    {
+        question: 'Can I withdraw my profits anytime?',
+        answer: 'Yes, you have complete control over your funds. You can withdraw your profits at any time without any restrictions or penalties. The algorithm will continue trading with the remaining balance.',
+    }
 ]
 
 const FAQ = () => {
@@ -33,53 +38,68 @@ const FAQ = () => {
     }
 
     return (
-        <section className="mt-20 text-white">
-            <div className="mx-auto max-w-7xl px-6 sm:px-12 lg:px-16">
-                {/* Heading */}
-                <div className="mb-16 text-center">
-                    <h6 className="text-lg text-white font-medium mb-5">
-                        🔍 FAQs
-                    </h6>
-                    <h2 className="text-3xl font-bold text-neutral-200 uppercase leading-snug">
+        <section className="relative py-20 overflow-hidden">
+            {/* Background gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-50"></div>
+            
+            <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section Title */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16"
+                >
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                         Frequently Asked Questions
                     </h2>
-                </div>
+                    <div className="w-24 h-1 bg-indigo-500 mx-auto"></div>
+                </motion.div>
 
                 {/* FAQ List */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className={`border-2 border-gray-900 rounded-2xl transition-all duration-300 ${
-                                openIndex === index
-                                    ? 'bg-gray-900'
-                                    : 'hover:bg-gray-900'
-                            }`}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
                         >
-                            {/* Question Button */}
-                            <button
-                                className="w-full flex items-center justify-between px-6 py-4 text-left font-medium transition duration-300 focus:outline-none"
-                                onClick={() => toggleFAQ(index)}
-                            >
-                                <span>{faq.question}</span>
-                                <FaChevronDown
-                                    className={` transition-transform duration-300 ${
-                                        openIndex === index ? 'rotate-180' : ''
-                                    }`}
-                                />
-                            </button>
+                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
+                                {/* Question Button */}
+                                <button
+                                    className="w-full flex items-center justify-between px-6 py-4 text-left focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-xl"
+                                    onClick={() => toggleFAQ(index)}
+                                    aria-expanded={openIndex === index}
+                                >
+                                    <span className="text-lg font-medium text-white">{faq.question}</span>
+                                    <FaChevronDown
+                                        className={`w-5 h-5 text-indigo-400 transform transition-transform duration-300 ${
+                                            openIndex === index ? 'rotate-180' : ''
+                                        }`}
+                                    />
+                                </button>
 
-                            {/* Answer (Collapsible) */}
-                            <div
-                                className={`px-6 pb-4 overflow-hidden transition-all duration-300 ${
-                                    openIndex === index
-                                        ? 'max-h-40 opacity-100'
-                                        : 'max-h-0 opacity-0'
-                                }`}
-                            >
-                                <p className="text-base">{faq.answer}</p>
+                                {/* Answer */}
+                                <AnimatePresence>
+                                    {openIndex === index && (
+                                        <motion.div
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: 'auto', opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="overflow-hidden"
+                                        >
+                                            <div className="px-6 pb-4">
+                                                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
