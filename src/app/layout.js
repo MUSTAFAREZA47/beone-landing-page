@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Money Machine X",
-  description: "By Be One Percent",
+  description: "Money Machine X is an advanced automated trading algorithm for MetaTrader 5. Optimize performance, reduce risk, and trade like a pro.",
 };
 
 export default function RootLayout({ children }) {
