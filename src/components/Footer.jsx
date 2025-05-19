@@ -1,33 +1,27 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaInstagram, FaTelegram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaInstagram, FaTelegram, FaYoutube } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const socialLinks = [
     {
         icon: <FaInstagram />,
-        url: 'https://www.instagram.com/be_one_percent_official',
+        url: 'https://www.instagram.com/moneymachinexea',
         color: 'hover:text-pink-500',
-        label: 'Instagram'
+        label: 'Instagram',
     },
     {
         icon: <FaTelegram />,
-        url: 'https://t.me/yourchannel',
+        url: 'https://t.me/+uZ9wUNy8TsIwY2I1',
         color: 'hover:text-blue-500',
-        label: 'Telegram'
+        label: 'Telegram',
     },
-    {
-        icon: <FaTwitter />,
-        url: 'https://twitter.com/yourprofile',
-        color: 'hover:text-blue-400',
-        label: 'Twitter'
-    },
-    {
-        icon: <FaYoutube />,
-        url: 'https://youtube.com/yourchannel',
-        color: 'hover:text-red-500',
-        label: 'YouTube'
-    },
+    // {
+    //     icon: <FaYoutube />,
+    //     url: 'https://youtube.com/yourchannel',
+    //     color: 'hover:text-red-500',
+    //     label: 'YouTube',
+    // },
 ]
 
 const footerLinks = {
@@ -115,7 +109,7 @@ export default function Footer() {
                                 +971-50-1234567
                             </p>
                             <p className="text-gray-400">
-                                support@beonepercent.com
+                                support@moneymachinex.com
                             </p>
                         </div>
                     </div>

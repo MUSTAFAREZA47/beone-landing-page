@@ -98,23 +98,35 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* Login/Logout Button */}
-                    <div className="hidden md:block">
-                        {isLoggedIn ? (
-                            <button
-                                onClick={handleLogout}
-                                className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-md transition-colors duration-200"
-                            >
-                                Logout
-                            </button>
-                        ) : (
+                    <div className="flex gap-3">
+                        {/* Telegram Button */}
+                        <div className="hidden md:block">
                             <Link
-                                href="/login"
-                                className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md transition-colors duration-200"
+                                href="https://t.me/+uZ9wUNy8TsIwY2I1"
+                                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-md px-4 py-2 hover:bg-white/10 transition-all duration-300"
                             >
-                                Login
+                                Join Us
                             </Link>
-                        )}
+                        </div>
+
+                        {/* Login/Logout Button */}
+                        <div className="hidden md:block">
+                            {isLoggedIn ? (
+                                <button
+                                    onClick={handleLogout}
+                                    className="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-md transition-colors duration-200"
+                                >
+                                    Logout
+                                </button>
+                            ) : (
+                                <Link
+                                    href="/login"
+                                    className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-md transition-colors duration-200"
+                                >
+                                    Login
+                                </Link>
+                            )}
+                        </div>
                     </div>
 
                     {/* Mobile menu button */}
@@ -180,6 +192,14 @@ const Navbar = () => {
                                 onClick={() => setIsOpen(false)}
                             >
                                 Legal Policies
+                            </Link>
+                        </li>
+                        <li className="mt-4">
+                            <Link
+                                href="https://t.me/+uZ9wUNy8TsIwY2I1"
+                                className="w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-md px-4 py-2 hover:bg-white/10 transition-all duration-300"
+                            >
+                                Join Us
                             </Link>
                         </li>
                         <li className="mt-4">

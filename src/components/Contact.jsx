@@ -7,6 +7,7 @@ import {
     MapPinIcon,
     PhoneIcon,
     EnvelopeIcon,
+    ChatBubbleLeftEllipsisIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
 
@@ -56,7 +57,9 @@ const ContactUs = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 className="text-4xl font-bold text-center mb-6">Contact Us</h2>
+                <h2 className="text-4xl font-bold text-center mb-6">
+                    Contact Us
+                </h2>
                 <div className="w-[200px] mx-auto h-[2px] bg-indigo-500 mb-10"></div>
             </motion.div>
 
@@ -83,8 +86,12 @@ const ContactUs = () => {
                         >
                             <MapPinIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
                             <div>
-                                <strong className="text-gray-200">Address: </strong>
-                                <span className="text-gray-400">Business Bay, Dubai, UAE</span>
+                                <strong className="text-gray-200">
+                                    Address:{' '}
+                                </strong>
+                                <span className="text-gray-400">
+                                    Business Bay, Dubai, UAE
+                                </span>
                             </div>
                         </motion.div>
                         <motion.div
@@ -93,8 +100,12 @@ const ContactUs = () => {
                         >
                             <PhoneIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
                             <div>
-                                <strong className="text-gray-200">Phone: </strong>
-                                <span className="text-gray-400">+971-50-1234567</span>
+                                <strong className="text-gray-200">
+                                    Phone:{' '}
+                                </strong>
+                                <span className="text-gray-400">
+                                    +971-50-1234567
+                                </span>
                             </div>
                         </motion.div>
                         <motion.div
@@ -103,8 +114,29 @@ const ContactUs = () => {
                         >
                             <EnvelopeIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
                             <div>
-                                <strong className="text-gray-200">Email: </strong>
-                                <span className="text-gray-400">support@moneymachinex.com</span>
+                                <strong className="text-gray-200">
+                                    Email:{' '}
+                                </strong>
+                                <span className="text-gray-400">
+                                    support@moneymachinex.com
+                                </span>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            className="flex items-center text-gray-300 group"
+                        >
+                            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
+                            <div>
+                                <strong className="text-gray-200">
+                                    Telegram :{' '}
+                                </strong>
+                                <a
+                                    href="https://t.me/+uZ9wUNy8TsIwY2I1"
+                                    className="text-blue-400"
+                                >
+                                    Join Our Community
+                                </a>
                             </div>
                         </motion.div>
                     </div>
@@ -122,7 +154,10 @@ const ContactUs = () => {
                     </h3>
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label htmlFor="name" className="block text-gray-200 font-medium mb-2">
+                            <label
+                                htmlFor="name"
+                                className="block text-gray-200 font-medium mb-2"
+                            >
                                 Full Name
                             </label>
                             <input
@@ -137,7 +172,10 @@ const ContactUs = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="email" className="block text-gray-200 font-medium mb-2">
+                            <label
+                                htmlFor="email"
+                                className="block text-gray-200 font-medium mb-2"
+                            >
                                 Email
                             </label>
                             <input
@@ -152,7 +190,10 @@ const ContactUs = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="phone" className="block text-gray-200 font-medium mb-2">
+                            <label
+                                htmlFor="phone"
+                                className="block text-gray-200 font-medium mb-2"
+                            >
                                 Contact Number
                             </label>
                             <input
@@ -167,7 +208,10 @@ const ContactUs = () => {
                             />
                         </div>
                         <div>
-                            <label htmlFor="message" className="block text-gray-200 font-medium mb-2">
+                            <label
+                                htmlFor="message"
+                                className="block text-gray-200 font-medium mb-2"
+                            >
                                 Message
                             </label>
                             <textarea
