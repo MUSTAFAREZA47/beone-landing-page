@@ -103,7 +103,7 @@ const TermsOfService = () => {
                 <h2 className="text-xl font-semibold mt-6">
                     10. Governing Law
                 </h2>
-                <p>These Terms are governed by the laws of India.</p>
+                <p>These Terms are governed by the laws of UAE.</p>
 
                 <h2 className="text-xl font-semibold mt-6">
                     11. Changes to Terms of Service

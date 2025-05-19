@@ -33,13 +33,15 @@ const values = [
 
 const About = () => {
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[120px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-[120px] pb-10">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2 className="text-4xl font-bold text-center mb-6">About Us</h2>
+                <h2 className="text-4xl font-bold text-center mb-6">
+                    About Us
+                </h2>
                 <div className="w-[200px] mx-auto h-[2px] bg-indigo-500 mb-10"></div>
             </motion.div>
 
@@ -68,8 +70,10 @@ const About = () => {
 
                 {/* Right: Mission Content */}
                 <div className="w-full">
-                    <h2 className="text-3xl font-semibold mb-4 text-gray-800">Our Vision</h2>
-                    <p className="text-gray-600 leading-relaxed">
+                    <h2 className="text-3xl font-semibold mb-4 text-gray-100">
+                        Our Vision
+                    </h2>
+                    <p className="text-gray-500 leading-relaxed">
                         At BeOne Percent, we envision a future where financial
                         freedom is accessible to everyone. Whether you are a
                         trader, a business owner, or a working professional, our
@@ -90,8 +94,10 @@ const About = () => {
             >
                 {/* Left: Mission Content */}
                 <div className="w-full">
-                    <h2 className="text-3xl font-semibold mb-4 text-gray-800">Our Mission</h2>
-                    <p className="text-gray-600 leading-relaxed">
+                    <h2 className="text-3xl font-semibold mb-4 text-gray-100">
+                        Our Mission
+                    </h2>
+                    <p className="text-gray-500 leading-relaxed">
                         Our mission is to simplify and revolutionize the trading
                         experience by providing advanced automation, expert
                         mentorship, and real-time market insights. We strive to
@@ -142,19 +148,28 @@ const About = () => {
 
                 {/* Right: Value Content */}
                 <div className="w-full">
-                    <h2 className="text-3xl font-semibold mb-6 text-gray-800">Our Values</h2>
+                    <h2 className="text-3xl font-semibold mb-6 text-gray-100">
+                        Our Values
+                    </h2>
                     <div className="space-y-4">
                         {values.map((value, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.3, delay: index * 0.1 }}
+                                transition={{
+                                    duration: 0.3,
+                                    delay: index * 0.1,
+                                }}
                                 viewport={{ once: true }}
-                                className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
                             >
-                                <h3 className="text-lg font-semibold text-indigo-600 mb-2">{value.title}</h3>
-                                <p className="text-gray-600">{value.description}</p>
+                                <h3 className="text-lg font-semibold text-indigo-600 mb-2">
+                                    {value.title}
+                                </h3>
+                                <p className="text-gray-600">
+                                    {value.description}
+                                </p>
                             </motion.div>
                         ))}
                     </div>

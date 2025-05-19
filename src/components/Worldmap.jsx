@@ -7,42 +7,18 @@ export function WorldMapDemo() {
         <div className=" py-20 dark:bg-black w-full">
             <div className="max-w-7xl mx-auto text-center">
                 <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
+                    <span className="text-neutral-400">We &nbsp;</span>
+                    Sell &nbsp;
                     <span className="text-neutral-400">
-                        {'We'.split('').map((word, idx) => (
-                            <motion.span
-                                key={idx}
-                                className="inline-block"
-                                initial={{ x: -10, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: idx * 0.04,
-                                }}
-                            >
-                                {word}
-                            </motion.span>
-                        ))}
-                    </span>{' '}
-                    Sell {' '}
-                    <span className="text-neutral-400">
-                        {'Worldwide'.split('').map((word, idx) => (
-                            <motion.span
-                                key={idx}
-                                className="inline-block"
-                                initial={{ x: -10, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{
-                                    duration: 0.5,
-                                    delay: idx * 0.04,
-                                }}
-                            >
-                                {word}
-                            </motion.span>
-                        ))}
+                      Worldwide
                     </span>
                 </p>
                 <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus natus eaque, labore iste porro ratione? Exercitationem id alias at, omnis recusandae doloremque inventore eum ullam iure facilis animi quod voluptate.
+                    Money Machine X is trusted by traders across the globe. No
+                    matter where you're based, our advanced algorithmic trading
+                    solutions are available to help you trade smarter, faster,
+                    and with confidence. Join our growing community and
+                    experience the power of automation that knows no borders.
                 </p>
             </div>
             <WorldMap

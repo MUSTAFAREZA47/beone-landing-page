@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 import { WorldMapDemo } from './Worldmap'
+import emailjs from '@emailjs/browser'
+
 import {
     MapPinIcon,
     PhoneIcon,
@@ -27,6 +29,23 @@ const ContactUs = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         // Handle form submission here
+        emailjs
+            .sendForm(
+                'service_okrky01', // replace with your actual EmailJS service ID
+                'template_sy0wc8h', // replace with your EmailJS template ID
+                form.current,
+                'YSXySG4To_cfCrJlm', // replace with your EmailJS public key
+            )
+            .then(
+                (result) => {
+                    console.log(result.text)
+                    alert('Your message has been sent successfully!')
+                },
+                (error) => {
+                    console.error(error.text)
+                    alert('Failed to send message. Please try again later.')
+                },
+            )
         console.log(formData)
     }
 
@@ -85,7 +104,7 @@ const ContactUs = () => {
                             <EnvelopeIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
                             <div>
                                 <strong className="text-gray-200">Email: </strong>
-                                <span className="text-gray-400">support@beonepercent.com</span>
+                                <span className="text-gray-400">support@moneymachinex.com</span>
                             </div>
                         </motion.div>
                     </div>
