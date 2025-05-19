@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 import { WorldMapDemo } from './Worldmap'
-import emailjs from '@emailjs/browser'
 
 import {
     MapPinIcon,
@@ -30,23 +29,6 @@ const ContactUs = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         // Handle form submission here
-        emailjs
-            .sendForm(
-                'service_okrky01', // replace with your actual EmailJS service ID
-                'template_sy0wc8h', // replace with your EmailJS template ID
-                form.current,
-                'YSXySG4To_cfCrJlm', // replace with your EmailJS public key
-            )
-            .then(
-                (result) => {
-                    console.log(result.text)
-                    alert('Your message has been sent successfully!')
-                },
-                (error) => {
-                    console.error(error.text)
-                    alert('Failed to send message. Please try again later.')
-                },
-            )
         console.log(formData)
     }
 
@@ -220,7 +202,7 @@ const ContactUs = () => {
                                 value={formData.message}
                                 onChange={handleChange}
                                 placeholder="Write your message here..."
-                                rows="4"
+                                rows="2"
                                 className="w-full p-3 bg-zinc-800/50 border border-gray-700 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none text-gray-100 placeholder-gray-500 transition-colors duration-300 resize-none"
                                 required
                             ></textarea>
