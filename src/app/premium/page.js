@@ -10,7 +10,7 @@ const videos = [
     {
         id: 1,
         title: 'INSTALLATION OF MONEY MACHINE X',
-        url: 'https://www.youtube.com/watch?v=8FoSM_TIbno',
+        url: 'https://www.youtube.com/watch?v=So--_mpWD-U',
     },
     {
         id: 2,
