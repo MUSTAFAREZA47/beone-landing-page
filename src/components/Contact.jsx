@@ -6,6 +6,7 @@ import {
     MapPinIcon,
     PhoneIcon,
     EnvelopeIcon,
+    UserGroupIcon,
     ChatBubbleLeftEllipsisIcon
 } from '@heroicons/react/24/outline'
 import { motion } from 'framer-motion'
@@ -108,7 +109,7 @@ const ContactUs = () => {
                             whileHover={{ scale: 1.02 }}
                             className="flex items-center text-gray-300 group"
                         >
-                            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
+                            <UserGroupIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
                             <div>
                                 <strong className="text-gray-200">
                                     Telegram :{' '}
@@ -118,6 +119,23 @@ const ContactUs = () => {
                                     className="text-blue-400"
                                 >
                                     Join Our Community
+                                </a>
+                            </div>
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            className="flex items-center text-gray-300 group"
+                        >
+                            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-indigo-500 mr-3 group-hover:text-indigo-400 transition-colors duration-300" />
+                            <div>
+                                <strong className="text-gray-200">
+                                    Telegram :{' '}
+                                </strong>
+                                <a
+                                    href="https://t.me/moneymachinexea"
+                                    className="text-blue-400"
+                                >
+                                    Chat With Us
                                 </a>
                             </div>
                         </motion.div>

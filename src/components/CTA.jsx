@@ -3,7 +3,7 @@ import { FaTelegram } from 'react-icons/fa'
 export default function CTAButton() {
     return (
         <a
-            href="https://t.me/+uZ9wUNy8TsIwY2I1"
+            href="https://t.me/moneymachinexea"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Contact us on Telegram"
